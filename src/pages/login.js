@@ -42,7 +42,7 @@ function Login() {
         .catch(err => {
             console.log(err)
             console.log(err.response)
-            const msg = err.response.data.message
+            const msg = err.response && err.response.data.message
             setErrors({combinedMessage: msg})
         })
     }

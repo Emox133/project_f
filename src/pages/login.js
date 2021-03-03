@@ -33,7 +33,7 @@ function Login() {
 
         axios.post('/users/login', data)
         .then(res => {
-            if(res.status === 200) {
+            if(res.status === 201) {
                 setAuthHeader(res.data.token)
                 setAuth(true)
                 history.push('/')

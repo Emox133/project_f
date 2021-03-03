@@ -1,7 +1,6 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import {usePosts} from '../contexts/postsContext'
 import Post from './post'
-import restrictXss from '../utils/preventXss'
 
 function Posts() {
     const [fields, setFields] = useState({
@@ -9,7 +8,7 @@ function Posts() {
       content: ''
     })
 
-    const {createPosts, errors, posts, getAllPosts} = usePosts()
+    const {createPosts, errors, posts} = usePosts()
 
     const handleFieldsChange = e => {
         setFields({

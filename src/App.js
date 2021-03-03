@@ -12,7 +12,7 @@ import {useAuth} from './contexts/authContext'
 import {usePosts} from './contexts/postsContext'
 import jwtDecode from 'jwt-decode'
 
-axios.defaults.baseURL = 'https://agile-meadow-81447.herokuapp.com/api/v1'
+// axios.defaults.baseURL = 'https://agile-meadow-81447.herokuapp.com/api/v1'
  
 function App() {
   const {auth, handleLogout, setAuth} = useAuth()
